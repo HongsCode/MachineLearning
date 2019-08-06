@@ -10,3 +10,6 @@ Maching Learning (Deep Learning)을 공부합니다.
    
    https://github.com/eventia/deepLearningOpenLecture
 
+2) 실습 환경
+   Python 3.6
+   Window 10
