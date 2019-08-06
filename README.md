@@ -13,3 +13,4 @@ Maching Learning (Deep Learning)을 공부합니다.
 > Window 10  
 > anaconda를 설치하고 그 안에 python을 설치해서 사용하는 방법도 있음  
 
+
