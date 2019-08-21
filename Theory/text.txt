@@ -225,7 +225,7 @@ x[0], x[1]값에 (0, 0), (1,0), (0, 1), (1,1)을 바꿔가면서 넣어줌,나�
 신경망 이론을 학습
 활성화 함수를 이용한다.
 
-고등학교 수학만 알면 따라할 수 있는 인공지능, 머신러닝, 딥러닝 32 (Step3_deeplearning/step_function.py)
+고등학교 수학만 알면 따라할 수 있는 인공지능, 머신러닝, 딥러닝 32 (Step3_deeplearning/stepfunction.py)
 활성화함수 : 입력신호의 총합을 출력신호로 변환하는것
 계단함수, 시그모이드, Relu
 
@@ -267,3 +267,46 @@ plt.plot(x,y)
 plt.ylim(-0.1, 1.1)
 plt.show()
 """
+
+고등학교 수학만 알면 따라할 수 있는 인공지능, 머신러닝, 딥러닝 33
+시그모이드 함수
+계단함수가 0에서 불연속(0에서 갑자기 1로 변함)인 점을 보완
+S자 형태의 함수로 특징은 
+1) 끊어지는 부분이 없고
+2) 모든 부분에서 미분이 가능하고
+3) 미분결과가 사용하기 간편한 형태
+
+"""
+import numpy as np
+import matplotlib.pylab as plt
+
+def sigmoid_function(x):
+	return 1 / (1+np.exp(-x))
+x = np.arange(-5.0, 5.0, 0.1)
+y = sigmoid_function(x)
+plt.plot(x,y)
+plt.ylim(-0.1, 1.1)
+plt.show()
+"""
+x가 0에 가까우면 작아지고, 0보다 멀어지면 커지고
+계단함수보다 좀 더 효율적이다. 
+
+고등학교 수학만 알면 따라할 수 있는 인공지능, 머신러닝, 딥러닝 34
+Relu 함수 
+입력이 0이하이면 0을 출력
+0이상이면 입력값을 그대로 출력
+
+"""
+import numpy as np
+import matplotlib.pylab as plt
+
+def relu_function(x):
+	return np.maximum(0,x)
+x = np.arange(-5.0, 5.0, 0.1)
+y = relu_function(x)
+plt.plot(x,y)
+plt.ylim(-0.1, 1.1)
+plt.show()
+"""
+
+선형과 비선형
